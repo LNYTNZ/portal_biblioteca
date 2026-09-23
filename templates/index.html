@@ -5,6 +5,7 @@
     <h1>Portal de Biblioteca</h1>
 
     <!-- Si existe la cookie, mostramos el último usuario -->
+    # Implementar Jinja y cookies
     {% if ultimo_usuario %}
         <p>Último usuario registrado: {{ ultimo_usuario }}.</p>
         <a href="{{ url_for('eliminar_cookie') }}">Eliminar cookie</a>
