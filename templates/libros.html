@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <h2>Bienvenido, {{ usuario }}</h2>
+
+    <ul>
+    <!-- Recorremos la lista de libros que viene desde app.py -->
+    {% for libro in libros %}
+        <li>
+            {{ libro.titulo }} — {{ libro.autor }} —
+
+            {% if libro.disponibles > 0 %}
+                Disponible ({{ libro.disponibles }})
+            {% else %}
+                No disponible
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

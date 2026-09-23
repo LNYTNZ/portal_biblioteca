@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal de Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Barra de navegación que se repite en todas las páginas -->
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('libros_view') }}">Libros</a>
+        <a href="{{ url_for('perfil') }}">Perfil</a>
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+    </nav>
+
+    <hr>
+
+    <!-- Aquí se inserta el contenido específico de cada página -->
+    {% block contenido %}
+    {% endblock %}
+
+</body>
+</html>
