@@ -34,6 +34,7 @@ def index():
 
 
 # Formulario de inicio de sesión
+# 2 COMMIT
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
